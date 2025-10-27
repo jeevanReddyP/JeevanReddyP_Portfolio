@@ -19,14 +19,23 @@ const projects = [
     tech: ["React", "Node.js", "MongoDB", "Express"],
     image: taskImg,
   },
+  {
+    title: "Portfolio Website",
+    description: "My personal portfolio built with React and TailwindCSS.",
+    github: "#",
+    demo: "#",
+    tech: ["React", "TailwindCSS"],
+    image: resumeImg,
+  },
 ];
 
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 px-6 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-800 text-white"
+      className="h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-800 text-white px-6"
     >
+      {/* Section Title */}
       <motion.h2
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -36,40 +45,50 @@ export default function Projects() {
         Projects
       </motion.h2>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+      {/* Projects Container */}
+      <div className="flex justify-between items-stretch w-full max-w-6xl gap-6">
         {projects.map((project, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2, duration: 0.8 }}
-            className="p-6 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300"
+            className="flex-1 flex flex-col justify-between bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow-lg hover:scale-105 transition-transform duration-300"
           >
-            <div className="mb-4 h-48 w-full rounded-lg overflow-hidden shadow-md">
+            {/* Image */}
+            <div className="h-40 w-full mb-4 rounded-lg overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
 
-            <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
-            <p className="text-gray-200 mb-4">{project.description}</p>
+            {/* Title & Description */}
+            <h3 className="text-xl font-semibold text-yellow-300 mb-2">
+              {project.title}
+            </h3>
+            <p className="text-gray-200 text-sm mb-3">{project.description}</p>
 
-            <div className="flex flex-wrap gap-2 mb-4">
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-2 mb-3">
               {project.tech.map((tech) => (
-                <span key={tech} className="px-2 py-1 bg-white/10 rounded">
+                <span
+                  key={tech}
+                  className="px-2 py-1 text-xs bg-white/10 rounded-full"
+                >
                   {tech}
                 </span>
               ))}
             </div>
 
-            <div className="flex gap-6 text-lg">
+            {/* Buttons */}
+            <div className="flex justify-center gap-3 text-sm">
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-yellow-300 text-black font-semibold rounded-full hover:bg-yellow-400 transition-colors duration-300"
+                className="px-3 py-1 bg-yellow-300 text-black rounded-full font-semibold hover:bg-yellow-400 transition"
               >
                 GitHub
               </a>
@@ -77,7 +96,7 @@ export default function Projects() {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-pink-300 text-black font-semibold rounded-full hover:bg-pink-400 transition-colors duration-300"
+                className="px-3 py-1 bg-pink-300 text-black rounded-full font-semibold hover:bg-pink-400 transition"
               >
                 Live Demo
               </a>
