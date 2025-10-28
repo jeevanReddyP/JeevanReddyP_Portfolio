@@ -1,31 +1,41 @@
 import { motion } from "framer-motion";
 import resumeImg from "../assets/images/resumeBuilder.png";
-import taskImg from "../assets/images/taskManager.png";
-
+import mindtrack from "../assets/images/MindTrack.png";
+import Global from "../assets/images/Global.png"
+import portfolio from "../assets/images/Portfolio.png"
 const projects = [
   {
     title: "Resume Builder",
     description: "A responsive Resume Builder with MERN.",
     github: "https://github.com/jeevanReddyP/ResumeBuilder",
-    demo: "#",
+    demo: "https://resume-bui.netlify.app/",
     tech: ["React", "Node.js", "MongoDB", "Express"],
     image: resumeImg,
   },
   {
-    title: "Task Manager",
-    description: "Full-stack MERN app for managing daily tasks.",
-    github: "https://github.com/jeevanReddyP/task-manager",
-    demo: "#",
-    tech: ["React", "Node.js", "MongoDB", "Express"],
-    image: taskImg,
+  title: "MINDTRACK",
+  description: "MindTrack is a productivity and habit-tracking web app built using the MERN stack. It helps users build consistent habits, visualize streaks, and gain insights through progress analytics. Developed collaboratively as a group project.",
+  github: "https://github.com/jeevanReddyP/MINDTRACK",
+  demo: "#",
+  tech: ["React", "Node.js", "MongoDB", "Express"],
+  image: mindtrack,
+  type: "Group Project"
+},
+  {
+    title: "GlobalExplorer",
+    description: "ReactJs TailwindCss maid GlobalExplorer",
+    github: "https://github.com/jeevanReddyP/Global-Explorer-Dashboard",
+    demo: "https://globalexplorerdashboard.netlify.app/",
+    tech: ["React", "TailwindCss"],
+    image:Global
   },
   {
     title: "Portfolio Website",
     description: "My personal portfolio built with React and TailwindCSS.",
-    github: "#",
-    demo: "#",
+    github: "https://github.com/jeevanReddyP/JeevanReddyP_Portfolio",
+    demo: "https://jeevan-reddy-portfolio.netlify.app/",
     tech: ["React", "TailwindCSS"],
-    image: resumeImg,
+    image: portfolio,
   },
 ];
 
