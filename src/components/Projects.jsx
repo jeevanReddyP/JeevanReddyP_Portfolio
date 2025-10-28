@@ -12,15 +12,15 @@ const projects = [
     tech: ["React", "Node.js", "MongoDB", "Express"],
     image: resumeImg,
   },
-  {
-  title: "MINDTRACK",
-  description: "MindTrack is a productivity and habit-tracking web app built using the MERN stack. It helps users build consistent habits, visualize streaks, and gain insights through progress analytics. Developed collaboratively as a group project.",
-  github: "https://github.com/jeevanReddyP/MINDTRACK",
-  demo: "#",
-  tech: ["React", "Node.js", "MongoDB", "Express"],
-  image: mindtrack,
-  type: "Group Project"
-},
+//   {
+//   title: "MINDTRACK",
+//   description: "MindTrack is a productivity and habit-tracking web app built using the MERN stack. It helps users build consistent habits, visualize streaks, and gain insights through progress analytics. Developed collaboratively as a group project.",
+//   github: "https://github.com/jeevanReddyP/MINDTRACK",
+//   demo: "#",
+//   tech: ["React", "Node.js", "MongoDB", "Express"],
+//   image: mindtrack,
+//   type: "Group Project"
+// },
   {
     title: "GlobalExplorer",
     description: "ReactJs TailwindCss maid GlobalExplorer",
