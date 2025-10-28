@@ -43,14 +43,14 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-800 text-white px-6"
+      className="h-screen flex flex-col justify-center items-center bg-linear-to-br from-gray-900 via-indigo-900 to-purple-800 text-white px-6"
     >
       {/* Section Title */}
       <motion.h2
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl sm:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-400"
+        className="text-4xl sm:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-linear-to-r from-yellow-300 to-pink-400"
       >
         Projects
       </motion.h2>
