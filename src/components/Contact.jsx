@@ -132,8 +132,14 @@ export default function Contact() {
           </motion.a>
 
           <motion.a
-            href="mailto:jeevanjgfr@gmail.com"
-            className="flex items-center justify-center w-full sm:w-80 gap-3 py-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-pink-600/30 transition-all duration-300"
+            href="mailto:jeevanjgfr@gmail.com?subject=Let's Connect&body=Hi Jeevan, I visited your portfolio and wanted to reach out."
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              window.location.href =
+                "mailto:jeevanjgfr@gmail.com?subject=Let's Connect&body=Hi Jeevan, I visited your portfolio and wanted to reach out.";
+            }}
+            className="flex items-center justify-center w-full sm:w-80 gap-3 py-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-pink-600/30 transition-all duration-300 cursor-pointer"
           >
             <FaEnvelope size={22} className="text-pink-400" />
             <span className="text-white text-lg font-medium">Email</span>
