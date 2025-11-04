@@ -24,7 +24,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 py-3 flex justify-between items-center">
         <h1 className="text-2xl sm:text-3xl font-bold text-yellow-400 tracking-wide">
-          JeevanReddy P
+          Portfolio
         </h1>
         <div className="hidden sm:flex space-x-8 text-lg text-white font-medium">
           {["Home", "About", "Projects", "Tech Stack", "Contact"].map((item) => (

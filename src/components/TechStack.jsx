@@ -27,7 +27,7 @@ export default function TechStack() {
   return (
     <section
       id="techstack"
-      className="h-screen flex flex-col justify-center items-center bg-linear-to-br from-gray-900 via-indigo-900 to-purple-800 text-white px-6"
+      className="min-h-screen flex flex-col justify-center items-center bg-linear-to-br from-gray-900 via-indigo-900 to-purple-800 text-white px-6"
     >
       {/* Heading */}
       <motion.h2

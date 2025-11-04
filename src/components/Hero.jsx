@@ -32,7 +32,7 @@ export default function Hero() {
         >
           Hi, I’m{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-400">
-            Jeevan Reddy P 👋
+            JeevanReddy P
           </span>
         </motion.h1>
 
@@ -51,22 +51,19 @@ export default function Hero() {
         </motion.p>
 
         {/* Buttons Section */}
-        <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start gap-4 sm:gap-7">
-          {[
-            {
+        <div className="mt-10 flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-4 sm:gap-7 text-center">
+          {[{
               text: "Download Resume",
               href: Resume,
               download: true,
-            },
-            {
+            }, {
               text: "View Resume",
-              href: "https://drive.google.com/file/d/1UiJf-TIx4YQ98wt-cBIPMh4eHaHVdGOL/view?usp=sharing",
-            },
-            {
+              href: `${Resume}`,
+            }, {
               text: "View My Work 🚀",
               href: "#projects",
-            },
-          ].map((btn, index) => (
+            }]
+            .map((btn, index) => (
             <motion.a
               key={index}
               href={btn.href}

@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import resumeImg from "../assets/images/resumeBuilder.png";
-import mindtrack from "../assets/images/MindTrack.png";
-import Global from "../assets/images/Global.png"
-import portfolio from "../assets/images/Portfolio.png"
+import Global from "../assets/images/Global.png";
+
 const projects = [
   {
     title: "Resume Builder",
@@ -12,30 +11,13 @@ const projects = [
     tech: ["React", "Node.js", "MongoDB", "Express"],
     image: resumeImg,
   },
-//   {
-//   title: "MINDTRACK",
-//   description: "MindTrack is a productivity and habit-tracking web app built using the MERN stack. It helps users build consistent habits, visualize streaks, and gain insights through progress analytics. Developed collaboratively as a group project.",
-//   github: "https://github.com/jeevanReddyP/MINDTRACK",
-//   demo: "#",
-//   tech: ["React", "Node.js", "MongoDB", "Express"],
-//   image: mindtrack,
-//   type: "Group Project"
-// },
   {
-    title: "GlobalExplorer",
-    description: "ReactJs TailwindCss maid GlobalExplorer",
+    title: "Global Explorer",
+    description: "ReactJs TailwindCss based GlobalExplorer",
     github: "https://github.com/jeevanReddyP/Global-Explorer-Dashboard",
     demo: "https://globalexplorerdashboard.netlify.app/",
     tech: ["React", "TailwindCss"],
-    image:Global
-  },
-  {
-    title: "Portfolio Website",
-    description: "My personal portfolio built with React and TailwindCSS.",
-    github: "https://github.com/jeevanReddyP/JeevanReddyP_Portfolio",
-    demo: "https://jeevan-reddy-portfolio.netlify.app/",
-    tech: ["React", "TailwindCSS"],
-    image: portfolio,
+    image: Global
   },
 ];
 
@@ -43,7 +25,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="h-screen flex flex-col justify-center items-center bg-linear-to-br from-gray-900 via-indigo-900 to-purple-800 text-white px-6"
+      className="h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-800 text-white px-6"
     >
       {/* Section Title */}
       <motion.h2
@@ -56,7 +38,7 @@ export default function Projects() {
       </motion.h2>
 
       {/* Projects Container */}
-      <div className="flex justify-between items-stretch w-full max-w-6xl gap-6">
+      <div className="flex flex-col sm:flex-row justify-center items-stretch w-full max-w-6xl gap-6 px-4">
         {projects.map((project, index) => (
           <motion.div
             key={index}
