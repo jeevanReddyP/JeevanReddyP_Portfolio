@@ -13,20 +13,20 @@ const projects = [
   },
   {
     title: "Global Explorer",
-    description: "A React and Tailwind CSS-based dashboard for exploring global data.",
+    description:
+      "A React and Tailwind CSS-based dashboard for exploring global data.",
     github: "https://github.com/jeevanReddyP/Global-Explorer-Dashboard",
     demo: "https://globalexplorerdashboard.netlify.app/",
     tech: ["React", "Tailwind CSS"],
     image: Global,
   },
-  // You can add more projects here later
 ];
 
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-800 text-white px-4 py-16 sm:px-6 lg:px-8"
+      className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-800 text-white px-4 py-16 sm:px-6 lg:px-10"
     >
       {/* Title */}
       <motion.h2
@@ -38,27 +38,27 @@ export default function Projects() {
         Projects
       </motion.h2>
 
-      {/* Grid Layout */}
+      {/* Container for projects */}
       <div
         className="
-          grid 
-          gap-8 
+          flex flex-wrap 
+          justify-center 
+          gap-2 sm:gap-4
           w-full 
           max-w-7xl 
-          grid-cols-[repeat(auto-fit,minmax(280px,1fr))] 
-          justify-items-center
+          mx-auto
         "
       >
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.2, duration: 0.8 }}
-            className="flex flex-col justify-between bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300 w-full max-w-sm"
+            className="flex flex-col justify-between h-full bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300 w-full max-w-xs sm:max-w-sm"
           >
             {/* Image */}
-            <div className="h-48 w-full mb-4 rounded-lg overflow-hidden">
+            <div className="h-44 w-full mb-4 rounded-lg overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
